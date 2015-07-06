@@ -19,6 +19,14 @@ videos =  12.times do |video|
   video.save!
 end
 
+video = Video.create
+video.title = "Families' Guys"
+video.description = "Adventures of Peter's Family"
+video.small_cover_url = "/tmp/family_guy.jpg"
+video.large_cover_url = "/tmp/monk_large.jpg"
+video.category_id = 1
+video.save!
+
 videos =  6.times do |video|
   video = Video.create
   video.title = "Futurama"
