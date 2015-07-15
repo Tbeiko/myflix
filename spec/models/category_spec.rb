@@ -12,7 +12,7 @@ describe Category do
       expect(category.recent_videos).to eq([south, futur])
     end
 
-    it "returns all videos in reverse chronological order if less six videos" do 
+    it "returns all videos if less than six videos" do 
       category = Category.create(name: "Comedy")
       futur = Video.create(title: "Futurama", description: "Space travel", category: category, created_at: 1.day.ago)
       south = Video.create(title: "South Park", description: "Fun and games", category: category)
