@@ -1,0 +1,11 @@
+%article.video_category
+  %header
+  - if @results.empty?
+    %h1 We couldn't find any matches. Please try again
+  - else
+    %h2 Here are the results for your search:
+    .videos.row
+      - @results.each do |video|
+        .video.col-sm-2
+          = link_to video_path(video), nil do
+            %img(src="#{video.small_cover_url}")
