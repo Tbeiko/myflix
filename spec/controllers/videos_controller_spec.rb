@@ -28,7 +28,6 @@ describe VideosController do
         post :search, search_term: 'rama'
         expect(response).to redirect_to sign_in_path  
       end
-      a
     end
   end
 end
