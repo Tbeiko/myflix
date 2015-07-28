@@ -1,14 +1,18 @@
 class ReviewsController < ApplicationController 
+  before_action :require_user
 
   def create
-    @review = Review.new(review_params)
+    @video = Video.find params[:video_id]
+    @review = Review.new(review_params.merge!(user: current_user))
+    @video.reviews << @review
 
     if @review.save
       flash[:success] = "Your review was added to this video."
-      redirect_to video_path(Video.find params[:video_id])
+      redirect_to @video
     else
       flash[:danger] = "Something went wrong, please try again."
-      render '/videos/show'
+      @reviews = @video.reviews.reload
+      render 'videos/show'
     end
   end
 
