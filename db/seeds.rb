@@ -46,3 +46,9 @@ videos =  6.times do |video|
   video.category_id = 3
   video.save!
 end
+
+tim = User.create(name: "Tim BB", password: "password", email: "tim@bb.com")
+video = Video.last 
+
+Review.create(user: tim, video: video, rating: 3, content: "That was okay." )
+Review.create(user: tim, video: video, rating: 2, content: "That was bad." )
