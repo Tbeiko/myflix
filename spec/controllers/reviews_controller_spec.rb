@@ -28,7 +28,7 @@ describe ReviewsController do
           expect(response).to redirect_to video_path(video)
         end
         it "sets the notice" do 
-          expect(flash[:success]).not_to be_blank
+          expect(flash[:success]).to be_present
         end
       end
 
@@ -58,7 +58,7 @@ describe ReviewsController do
 
         it "sets the error" do 
           post :create, review: {rating: 1}, :video_id => video.id
-          expect(flash[:danger]).not_to be_blank
+          expect(flash[:danger]).to be_present
         end
       end
     end 
