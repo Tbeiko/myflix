@@ -8,7 +8,7 @@ describe SessionsController do
     end
 
     it "redirects to the homepage for authenticated users" do 
-      session[:user_id] = Fabricate(:user).id 
+      set_current_user
       get :new
       expect(response).to redirect_to home_path
     end
