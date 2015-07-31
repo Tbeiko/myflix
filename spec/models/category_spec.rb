@@ -37,6 +37,4 @@ describe Category do
       expect(category.recent_videos).to eq([])
     end
   end
-  
-
 end

@@ -25,7 +25,6 @@ describe VideosController do
         get :show, id: video.id 
         expect(assigns(:review)).to be_instance_of(Review)
       end
-
     end
 
     it "redirects to sign in page if unauthenticated" do 

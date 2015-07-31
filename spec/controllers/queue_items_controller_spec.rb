@@ -64,7 +64,6 @@ describe QueueItemsController do
         expect(response).to redirect_to sign_in_path
       end
     end
-
   end
 
   describe "DELETE destroy" do 
@@ -174,23 +173,5 @@ describe QueueItemsController do
         expect(queue_item1.reload.position).to eq(1)
       end
     end
-    
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

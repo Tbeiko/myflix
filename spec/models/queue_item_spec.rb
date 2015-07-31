@@ -49,7 +49,6 @@ describe QueueItem do
   end
 
   describe "#rating=" do 
-
     it "changes the rating of the review if the rating is present" do
       user = Fabricate(:user)
       video = Fabricate(:video)
@@ -67,6 +66,7 @@ describe QueueItem do
       queue_item.rating = nil
       expect(review.reload.rating).to be_nil
     end
+
     it "creates a review with the rating if the review is not present" do 
       user = Fabricate(:user)
       video = Fabricate(:video)
@@ -76,7 +76,3 @@ describe QueueItem do
     end
   end
 end
-
-
-
-
