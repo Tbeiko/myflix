@@ -1,7 +1,7 @@
 %article.video
   .container
     .row
-      .video_large_cover.col-sm-7.col-sm-offset-1
+      .video_large_cover.col-sm-8
         %img(src="#{@video.large_cover_url}")
       .video_info.col-sm-3
         %header
@@ -10,7 +10,7 @@
         %p #{@video.description}
         .actions
           %a.btn.btn-primary(href="") Watch Now
-          %a.btn.btn-default(href="") + My Queue
+          = link_to "+ My Queue", queue_items_path(video_id: @video.id), method: "POST", class: "btn btn-default"
 
 %section.reviews.container
   .row

@@ -37,5 +37,4 @@ describe Video do
       expect(Video.search_by_title("")).to eq([])
     end
   end
-
 end
