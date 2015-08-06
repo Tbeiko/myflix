@@ -1,0 +1,70 @@
+I wrote my last post six weeks after our team started JFDI - a 100 days accelerator program in Singapore. At that point, we'd had the initial concept we came in with - a peer to peer delivery service - thoroughly challenged by investors. There were obvious flaws in our model and it didn't seem as though it'd be possible to build a company on such shaky foundations.
+
+For a single transaction to work out, we had to find a requester someone who was not only heading their way, but who was also willing to purchase the item, pack it in their bags and meet with a total stranger for the delivery. And all of this had to happen before the requester found another way to get a hold of their item.
+
+Many stars had to align for things to work, and once they did, problems around the frequency of usage, average transaction amount and legislations made scaling such a service extremely complicated. And even if we overcame such a challenge, some investors worried that as shipping got better in Southeast Asia, our business would cease to be relevant, that it was destined to extinction. 
+
+One investor bluntly described our model as "rotten to the core".
+
+At that point, our choices were either to keep on pushing in what was seemingly a dead end, or rethink everything about our service. We chose the latter. 
+
+We'd started Envoyrs with the goal of helping people who live abroad get things they can't find where they are. Since our users were mainly travelers and expats, we rapidly had a user base that was scattered around the globe. This made it even harder for us to "get all the stars to align". 
+
+One solution, we figured, would be to focus on a single geography. If our goal was to get our users their things, we could at least accomplish that in a single geography. And in order to make the service more reliable, we could act as a concierge instead of a marketplace. Our users would then be communicating with us, not amongst themselves. This way, we could exercise a better control on the quality of the service.
+
+All of this happened around the time Magic was making waves in the press for offering an SMS concierge service that would basically do anything for you. We decided to use their low-UI approach a build a simple chat app where people in Singapore could request items in real time.
+
+We built a prototype over the weekend and demoed it within the JFDI community. Things went well: in one week, we did more deliveries than we had with Envoyrs in three months!
+
+We then polished the prototype, hired some interns and got ready to launch GetAnything.asia to the world. The next Tuesday, we launched it and began working on the incoming requests. 
+
+But instead of receiving requests from overworked professionals willing to pay a premium to simply get things done, like Magic, our requests grew more and more diverse. Most users were in fact very price sensitive, and, due to the somewhat anonymous feel of the website, troll requests began pouring in. And it didn't help that Singapore's national sport is basically shopping. With malls on every street corner, consumers are already aware of where to get the best deals. 
+
+After a few days, we realized we'd need to find a way to ensure some baseline of quality for incoming requests. Our biggest problems had been that people either were too price sensitive or asked for complicated things, but did not follow through once we'd done the grunt work of finding either the perfect hotel, gift or air-conditioner for their homes.
+
+The obvious way to solve this would be to set a monthly fee for the service. Or, in some other way, have users pay some fee upfront to both detract trolls and have actual users committed to using the service already. 
+
+And that got us thinking.
+
+Here we were, now 9 or so weeks in to the program, changing gears again. The prospect of building a concierge service for wealthy expats in Singapore didn't excite us as much as our initial, albeit naive, vision of "changing delivery" and "getting the things you need, no matter where you are". 
+
+And the process felt unnatural. It didn't feel as though we were iterating in order to reach a final destination as much as looking for the nearest low-hanging fruit we could harvest.
+
+Clearly, we needed to take an even bigger step back. 
+
+After spending a full week stressing out about not being sure what we wanted to do, whether we should keep our interns (or let them go less than two weeks in), what we would present at demo day (which was only a few weeks away), we asked Meng, JFDI's co-founder, for a chat. 
+
+We did most of the talking and he patiently listened. JFDI's accelerated over 60 startups now, so we weren't his first meltdown (they actually used to have a full time counselor as part of the staff). After a while, he suggested we take some time away, go to the beach and read a few books.
+
+We did just that.
+
+My birthday was coming up, Monday was a national holiday, and we needed a break. Minutes after Meng left, we booked tickets to Bali for the next morning.
+
+Catherine and I decided we would use Bali as a real step back, and not try and solve all of our problems there, but enjoy the time off, take the time to go through the books and - most importantly - take a step back from everything in order to have the psychological space to think clearly.
+
+And, for the most part, it worked. We didn't manage to completely shake off the "what the fuck is happening" feeling, but still, we enjoyed the beach, the food and the drinks Bali had to offer.
+
+Going back to where we'd started this crazy adventure also made us realize how far we'd came in only a few months. 
+
+But soon, the weekend was over and we were boarding a plane back to Singapore. Somewhat rested, but still without a plan.
+
+Demo Day was still only a few weeks away and we still didn't have a business. 
+I still had this knot in my stomach, feeling stuck in a corner with the two options being either complete failure or building something only for the sake of presenting at demo day. 
+
+The next morning, a founder from another startup in our batch asked us how Bali had gone, and what our plan was. I can't recall how the conversation went, but when he left, I went to see Catherine with an idea: what if we deferred our pitch until the next batch, in December? 
+
+That would give us six months (instead of six weeks) to think about what we wanted to do, build something and get some initial traction. 
+
+As obvious as it sounds in retrospect, that idea had not crossed our minds until then. And just thinking about it felt like 1000 pounds had been lifted off my shoulders.
+
+Clearly, we weren't ready to pitch investors, and we doubted that spending our days listening to mentor talks on fundraising or practicing delivering our pitch for a business that didn't exist would help. 
+
+We needed to take some time to think things through, and this was not the context to do so. But on the other hand, we had all of JFDI's infrastructure in place to help us grow whatever we wanted to do.
+
+"Dropping out" of the accelerator felt like both the most sacrilegious and natural thing to do at the same time. 
+
+We asked Meng and others at JFDI if such a thing would be possible, if we could leave and then possibly come back and pitch at the next demo day and he told us we could. Not everyone agreed this was the right thing to do, but then again, no one had a picture of our situation as complete as we did. In the end, it felt like the right thing to do. 
+
+The process so far had felt as though we were trying to hold on to anything simply for the sake of "having a startup". And that wasn't our goal anymore. We needed more than a weekend off to clear our heads and set the foundations to build something significant, sustainable and aligned with our long term vision.
+
+So, less than one week after returning from Bali, Catherine and I both had, once again, a one way ticket to the other side of the world. But this time, in the other direction: To Montreal.

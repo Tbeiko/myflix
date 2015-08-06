@@ -12,13 +12,13 @@ describe User do
       user  = Fabricate(:user)
       video = Fabricate(:video)
       Fabricate(:queue_item, user: user, video: video)
-      user.queued_video?(video).should be_truthy
+      expect(user.queued_video?(video)).to be_truthy
     end
     
     it "returns false when the user hasn't queue the video" do 
       user  = Fabricate(:user)
       video = Fabricate(:video)
-      user.queued_video?(video).should be_falsey
+      expect(user.queued_video?(video)).to be_falsey
     end 
   end
 end

@@ -35,11 +35,11 @@ feature "User interacts with the queue" do
   end
 
   def expect_video_to_be_in_queue(video)
-    page.should have_content(video.title)
+    expect(page).to have_content(video.title)
   end
 
   def expect_link_to_be_hidden(link)
-    page.should_not have_content(link)
+    expect(page).not_to have_content(link)
   end
 
   def set_video_position(video, position)
