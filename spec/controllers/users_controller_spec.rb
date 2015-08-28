@@ -33,6 +33,25 @@ describe UsersController do
         expect(assigns(:user)).to be_instance_of(User)
       end
     end
+
+    context "sending emails" do 
+      after { ActionMailer::Base.deliveries.clear }
+
+      it "sends out email to the user with valid inputs" do 
+        post :create, user: { name: "John Doe", email: "john@doe.com", password: "123456" }
+        expect(ActionMailer::Base.deliveries.last.to).to eq(["john@doe.com"])
+      end
+
+      it "send out email containing the users's name with valid input" do 
+        post :create, user: { name: "John Doe", email: "john@doe.com", password: "123456" }
+        expect(ActionMailer::Base.deliveries.last.body).to include("John Doe")
+      end
+      
+      it "does not send out email with invalid inputs" do 
+        post :create, user: { name: "John Doe", email: "john@doe.com", password: nil }
+        expect(ActionMailer::Base.deliveries).to be_empty
+      end
+    end
   end
 
   describe "GET show" do 
