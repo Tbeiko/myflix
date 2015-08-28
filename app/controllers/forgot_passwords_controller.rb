@@ -11,6 +11,5 @@ class ForgotPasswordsController < ApplicationController
   end
 
   def confirm
-
   end
 end
