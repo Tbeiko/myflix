@@ -1,6 +1,6 @@
 class PasswordResetsController < ApplicationController
   def show
-    user = User.where(token: params[:id]).first
+    user = User.find_by(token: params[:id])
     if user 
       @token = user.token
     else
@@ -9,15 +9,20 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-    user = User.where(token: params[:token]).first
-    if user
-      user.password = params[:password]
-      user.generate_token
-      user.save
+    user = User.find_by(token: params[:token])
+    if user && user.update(password: params[:password])
       flash[:success] = "Your password was successfully updated."
       redirect_to sign_in_path
+    elsif user
+      @token = user.token
+      flash[:danger] = "Invalid password."
+      render :show
     else
       redirect_to expired_token_path
+    end
+    if user
+      user.generate_token
+      user.save
     end
   end
 end
