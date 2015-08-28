@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  before_create :generate_token
+
   validates_presence_of :email, :password, :name
   validates_uniqueness_of :email  
   has_secure_password validations: false
@@ -24,4 +26,11 @@ class User < ActiveRecord::Base
   def can_follow?(another_user)
     !(self.follows?(another_user) ||  self == another_user)
   end
+
+  private 
+
+  def generate_token
+    self.token = SecureRandom.urlsafe_base64
+  end
+
 end
