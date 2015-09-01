@@ -4,6 +4,11 @@ describe PasswordResetsController do
   describe "GET show" do 
     let(:user) { Fabricate(:user) }
 
+    # This would happen when the user clicks the forgot password link
+    before do 
+      user.generate_token
+    end
+
     it "renders show template if the token is valid" do 
       get :show, id: user.token
       expect(response).to render_template :show
@@ -23,6 +28,11 @@ describe PasswordResetsController do
   describe "POST create" do 
     context "with valid token" do 
       let(:user) { Fabricate(:user, password: "oldpassword") }
+    
+      # This would happen when the user clicks the forgot password link
+      before do
+        user.generate_token
+      end
 
       it "redirects to the sign in page" do 
         post :create, token: user.token, password: "newpassword"
@@ -39,10 +49,10 @@ describe PasswordResetsController do
         expect(flash[:success]).to be_present
       end
 
-      it "regenerates the users's token" do 
+      it "removes the users's token" do 
         old_token = user.token
         post :create, token: user.token, password: "newpassword"
-        expect(user.reload.token).not_to eq(old_token)
+        expect(user.reload.token).to be_nil
       end
     end
 

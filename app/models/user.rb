@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  before_create :generate_token
 
   validates_presence_of :email, :password, :name
   validates_uniqueness_of :email  
@@ -28,6 +27,10 @@ class User < ActiveRecord::Base
   end
 
   def generate_token
-    self.token = SecureRandom.urlsafe_base64
+    self.update_attribute(:token, SecureRandom.urlsafe_base64)
+  end
+
+  def remove_token
+    self.update_attribute(:token, nil)
   end
 end

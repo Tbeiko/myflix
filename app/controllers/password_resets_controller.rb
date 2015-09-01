@@ -20,9 +20,9 @@ class PasswordResetsController < ApplicationController
     else
       redirect_to expired_token_path
     end
+
     if user
-      user.generate_token
-      user.save
+      user.remove_token
     end
   end
 end
