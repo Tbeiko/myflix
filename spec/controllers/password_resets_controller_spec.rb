@@ -81,17 +81,5 @@ describe PasswordResetsController do
         expect(response).to render_template :show
       end
     end
-
-    context "with too many attempts" do 
-      let(:user) { Fabricate(:user, password: "oldpassword") }
-      it "redirects to the expired token path" do 
-        post :create, token: user.token, password: "newpassword", confirm_password: "anotherpassword"
-        post :create, token: user.token, password: "newpassword", confirm_password: "anotherpassword"
-        post :create, token: user.token, password: "newpassword", confirm_password: "anotherpassword"
-        post :create, token: user.token, password: "newpassword", confirm_password: "anotherpassword"
-        require 'pry'; binding.pry
-        expect(response).to redirect_to expired_token_path
-      end
-    end 
   end
 end
