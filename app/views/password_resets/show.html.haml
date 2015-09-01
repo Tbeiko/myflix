@@ -7,6 +7,8 @@
         %fieldset.form-group
           = label_tag :password, "New Password"
           = password_field_tag :password
+          = label_tag :confirm_password, "Confirm Password"
+          = password_field_tag :confirm_password
           = hidden_field_tag :token, @token
         %fieldset.action
           = submit_tag "Update Password", class: "btn"
