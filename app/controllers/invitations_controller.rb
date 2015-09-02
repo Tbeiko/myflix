@@ -7,6 +7,7 @@ class InvitationsController < ApplicationController
 
   def create
     @invitation = Invitation.create(invitation_params.merge!(inviter_id: current_user.id))
+
     if @invitation.save
       AppMailer.send_invitation_email(@invitation).deliver
       flash[:success] = "Your invitation is on it's way!"
@@ -20,6 +21,6 @@ class InvitationsController < ApplicationController
   private 
 
   def invitation_params
-    params.require(:invitation).permit(:recipient_name, :recipient_email, :message)
+    params.require(:invitation).permit(:recipient_name, :recipient_email, :message, :token)
   end
 end

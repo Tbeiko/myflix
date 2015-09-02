@@ -8,4 +8,5 @@
           = f.text_field :name, label: "Full Name"
           = f.email_field :email, label: "Email Address"
           = f.password_field :password
+          = hidden_field_tag :invitation_token, @invitation_token
           %button.btn.btn-default(type="submit") Register
