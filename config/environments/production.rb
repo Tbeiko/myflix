@@ -16,6 +16,8 @@ Myflix::Application.configure do
 
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify
+  config.action_mailer.default_url_options = { :host => 'https://timflix.herokuapp.com' }
+  Rails.application.routes.default_url_options[:host] = 'timflix.herokuapp.com'
 
   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
@@ -25,7 +27,6 @@ Myflix::Application.configure do
     :domain         => 'https://timflix.herokuapp.com',
     :authentication => :plain,
   }
+
   ActionMailer::Base.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'https://timflix.herokuapp.com' }
-  Rails.application.routes.default_url_options[:host] = 'timflix.herokuapp.com'
 end
