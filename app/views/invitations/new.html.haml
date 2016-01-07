@@ -9,6 +9,6 @@
         %fieldset
           = f.email_field :recipient_email, label: "Freind's Email Address"
         %fieldset
-          = f.text_area :message, class: 'span4', rows: 6, label: "Message", placeholder: "I'm using Myflix, you can join today too"
+          = f.text_area :message, rows: 6, label: "Message", placeholder: "I'm using Myflix, you can join today too"
         %fieldset.form-group.action
           %input(type="submit" value="Send Invitation" class="btn btn-default")

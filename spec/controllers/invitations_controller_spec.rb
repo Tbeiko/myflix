@@ -6,8 +6,7 @@ describe InvitationsController do
     it "sets @invitation to a new invitation" do 
       set_current_user
       get :new
-      expect(assigns(:invitation)).to be_new_record
-      expect(assigns(:invitation)).to be_instance_of(Invitation)     
+      expect(assigns(:invitation)).to be_a_new(Invitation)  
     end
 
 
