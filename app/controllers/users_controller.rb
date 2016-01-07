@@ -43,7 +43,7 @@
       invitation = Invitation.find_by(token: params[:invitation_token])
       @user.follow(invitation.inviter)
       invitation.inviter.follow(@user)
-      invitation.update_column(:token, nil)
+      invitation.remove_token
     end
   end
 
