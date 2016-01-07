@@ -18,10 +18,10 @@ class PasswordResetsController < ApplicationController
         redirect_to sign_in_path
       elsif passwords_match?
         @token = user.token
-        flash[:danger] = "Invalid password."
+        flash.now[:danger] = "Invalid password."
         render :show
       else 
-        flash[:danger] = "The passwords didn't match"
+        flash.now[:danger] = "The passwords didn't match"
         render :show
       end
 

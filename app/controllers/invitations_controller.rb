@@ -13,7 +13,7 @@ class InvitationsController < ApplicationController
       flash[:success] = "Your invitation is on it's way!"
       redirect_to new_invitation_path
     else
-      flash[:danger] = "Something went wrong, please try again."
+      flash.now[:danger] = "Something went wrong, please try again."
       render :new
     end
   end

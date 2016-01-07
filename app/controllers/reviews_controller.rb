@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
       flash[:success] = "Your review was added to this video."
       redirect_to @video
     else
-      flash[:danger] = "Something went wrong, please try again."
+      flash.now[:danger] = "Something went wrong, please try again."
       @reviews = @video.reviews.reload
       render 'videos/show'
     end
