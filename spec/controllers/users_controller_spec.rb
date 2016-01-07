@@ -20,8 +20,9 @@ describe UsersController do
     end
 
     context "with valid input and invitation token" do 
+      let(:user) { Fabricate(:user) }
+
       it "makes the user follow the inviter" do 
-        user = Fabricate(:user)
         invitation = Fabricate(:invitation, inviter: user)
         post :create, user: { name: invitation.recipient_name, email: invitation.recipient_email, password: "password"}, invitation_token: invitation.token
         new_user = User.find_by(email: invitation.recipient_email)
@@ -29,7 +30,6 @@ describe UsersController do
       end
 
       it "makes the inviter follow the user" do 
-        user = Fabricate(:user)
         invitation = Fabricate(:invitation, inviter: user)
         post :create, user: { name: invitation.recipient_name, email: invitation.recipient_email, password: "password"}, invitation_token: invitation.token
         new_user = User.find_by(email: invitation.recipient_email)
@@ -37,7 +37,6 @@ describe UsersController do
       end
 
       it "expires the invitation" do 
-        user = Fabricate(:user)
         invitation = Fabricate(:invitation, inviter: user)
         post :create, user: { name: invitation.recipient_name, email: invitation.recipient_email, password: "password"}, invitation_token: invitation.token
         expect(Invitation.first.token).to be_nil
