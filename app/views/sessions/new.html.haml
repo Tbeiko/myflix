@@ -1,13 +1,8 @@
-%section.register.container
-  .row
-    .col-sm-10.col-sm-offset-1
-    = form_tag(sessions_path, class: 'sign_in', layout: :horizontal) do 
-      %header
-        %h1 Sign In
-      %fieldset
-        = label_tag :email, "Email Address"
-        = email_field_tag :email
-        = label_tag :password
-        = password_field_tag :password
-        %button.btn.btn-default(type="submit") Sign In
-        = link_to "Forgot Password?", forgot_password_path
+%section.register.container.sign-up-form
+  = bootstrap_form_tag(url: '/sessions', layout: :inline) do |f| 
+    %header
+      %h1 Sign In 
+    = f.email_field :email, label: "Email"
+    = f.password_field :password, label: "Password"
+    = f.submit "Sign In", class: "btn btn-default"
+    = link_to "Forgot Password?", forgot_password_path

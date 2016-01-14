@@ -1,7 +1,7 @@
 %section.register.container
   .row
     .col-sm-10.col-sm-offset-1
-      = bootstrap_form_for @user, html: { class: "form-horizontal" } do |f|
+      = bootstrap_form_for @user, layout: :horizontal do |f|
         %header
           %h1 Register
         %fieldset
@@ -9,4 +9,5 @@
           = f.email_field :email, label: "Email Address"
           = f.password_field :password
           = hidden_field_tag :invitation_token, @invitation_token
-          %button.btn.btn-default(type="submit") Register
+          = f.form_group do
+            = f.submit "Register", class: "btn btn-default"
