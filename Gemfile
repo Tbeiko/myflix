@@ -13,6 +13,7 @@ gem 'bootstrap_form'
 gem 'bcrypt-ruby', '3.1.2' 
 gem 'shoulda-matchers'
 gem 'fabrication'
+gem 'sidekiq'
 
 group :development do
   gem 'thin'
