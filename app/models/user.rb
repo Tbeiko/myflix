@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-
   validates_presence_of :email, :password, :name
   validates_uniqueness_of :email  
   has_secure_password validations: false
@@ -16,6 +15,10 @@ class User < ActiveRecord::Base
 
   def queued_video?(video)
     self.queue_items.map(&:video).include?(video)
+  end
+
+  def follow(another_user)
+    following_relationships.create(leader: another_user) if can_follow?(another_user)
   end
 
   def follows?(another_user)

@@ -1,14 +1,15 @@
 %section#top-header.row
   %h1.col-md-2
-    = link_to "MyFLiX", root_path
+    = link_to "TimFLiX", root_path
   - if current_user
-    %ul.col-md-4.clearfix
+    %ul.col-md-3.clearfix
       %li= link_to "Videos", root_path
       %li= link_to "My Queue", my_queue_path
       %li= link_to "People", people_path
-    = form_tag(search_videos_path, method: "get", class: "span5 for-search") do
-      %input.search-query(name="search_term" type="text" placeholder="Search for videos here")
-      %button.btn.btn-default(type="submit") Search
+    .col-md-5
+      = bootstrap_form_tag(url: '/videos/search', method: "get", layout: :inline, class: "col-md-4") do |f|
+        = f.text_field :search_term, type: "text", placeholder: "Search for your videos here", hide_label: true
+        = f.submit "Search", class: "btn btn-default"
     #user_links.pull-right
       %ul
         %li.dropdown
@@ -17,6 +18,7 @@
             %b.caret
           %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
             %li
+              = link_to "Invite a friend", new_invitation_path
               = link_to "Account", user_path(current_user)
               %a(href="#") Plan and Billing
               = link_to "Sign Out", sign_out_path
