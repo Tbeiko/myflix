@@ -38,7 +38,7 @@ feature "User invites friend" do
   end
 
   def sign_in_thru_form(username, password)
-    fill_in "Email Address", with: username
+    fill_in "Email", with: username
     fill_in "Password",      with: password
     click_button "Sign In"
   end
