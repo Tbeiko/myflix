@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.7'
+ruby '2.1.8'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails'
@@ -15,6 +15,7 @@ gem 'shoulda-matchers'
 gem 'fabrication'
 gem 'sidekiq'
 gem 'foreman'
+gem 'unicorn'
 
 group :development do
   gem 'thin'
