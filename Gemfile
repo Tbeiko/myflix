@@ -14,6 +14,7 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'shoulda-matchers'
 gem 'fabrication'
 gem 'sidekiq'
+gem 'foreman'
 
 group :development do
   gem 'thin'
