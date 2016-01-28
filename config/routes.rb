@@ -3,6 +3,8 @@ Myflix::Application.routes.draw do
   get '/home', to: 'videos#index'
   get 'ui(/:action)', controller: 'ui'
 
+  mount ResqueWeb::Engine => "/resque_web"
+  
   resources :videos, only: :show do
     collection do 
       get '/search', to: 'videos#search'
