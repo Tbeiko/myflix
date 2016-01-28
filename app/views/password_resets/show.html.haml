@@ -1,0 +1,12 @@
+%section.reset_password.container
+  .row
+    .col-sm-10.col-sm-offset-1
+      = bootstrap_form_tag url: '/password_resets', class: "" do |f|
+        %header
+          %h1 Reset Your Password
+        %fieldset.form-group
+          = f.password_field :password, label: "New Password"
+          = f.password_field :confirm_password, label: "Confirm Password"
+          = f.hidden_field :token, value: @token
+        %fieldset.action
+          = f.submit "Update Password", class: "btn btn-default"

@@ -1,0 +1,8 @@
+%section.register.container.sign-up-form
+  = bootstrap_form_tag(url: '/sessions', layout: :inline) do |f| 
+    %header
+      %h1 Sign In 
+    = f.email_field :email, label: "Email"
+    = f.password_field :password, label: "Password"
+    = f.submit "Sign In", class: "btn btn-default"
+    = link_to "Forgot Password?", forgot_password_path
