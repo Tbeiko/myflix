@@ -18,6 +18,12 @@ gem 'foreman'
 gem 'unicorn'
 gem "sentry-raven" 
 
+# Resque for scheduling
+gem 'resque', '~> 1.25.2'
+gem 'resque-scheduler', '~> 4.0.0'
+gem 'resque-web', require: 'resque_web'
+gem 'resque-scheduler-web'
+
 group :development do
   gem 'thin'
   gem "better_errors"

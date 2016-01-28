@@ -1,10 +1,13 @@
+require "resque_web"
+
 Myflix::Application.routes.draw do
   root to: 'static_pages#front' 
   get '/home', to: 'videos#index'
   get 'ui(/:action)', controller: 'ui'
 
-  mount ResqueWeb::Engine => "/resque_web"
-  
+  # Mounts the resque web console
+  mount ResqueWeb::Engine => "/resque"
+
   resources :videos, only: :show do
     collection do 
       get '/search', to: 'videos#search'
