@@ -258,6 +258,7 @@ DEPENDENCIES
   pry-nav
   rails (= 4.1.1)
   rails_12factor
+  redis
   resque (~> 1.25.2)
   resque-scheduler (~> 4.0.0)
   resque-scheduler-web
