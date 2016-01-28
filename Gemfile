@@ -16,6 +16,7 @@ gem 'fabrication'
 gem 'sidekiq'
 gem 'foreman'
 gem 'unicorn'
+gem "sentry-raven" 
 
 group :development do
   gem 'thin'
@@ -38,7 +39,7 @@ group :test do
   gem 'launchy'
 end
 
-group :production do
+group :production, :staging do
   gem 'rails_12factor'
 end
 
