@@ -5,7 +5,7 @@ feature 'User resets password' do
     user = Fabricate(:user, password: "old_password")
     visit sign_in_path
     click_link "Forgot Password?"
-    fill_in "Email Address", with: user.email
+    fill_in "Email", with: user.email
     click_button "Send Email"
 
     open_email(user.email)
@@ -15,7 +15,7 @@ feature 'User resets password' do
     fill_in "Confirm Password", with: "new_password"
     click_button "Update Password"
 
-    fill_in "Email Address", with: user.email
+    fill_in "Email", with: user.email
     fill_in "Password",      with: "new_password"
     click_button "Sign In"
 

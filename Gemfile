@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.7'
+ruby '2.1.8'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails'
@@ -14,6 +14,9 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'shoulda-matchers'
 gem 'fabrication'
 gem 'sidekiq'
+gem 'foreman'
+gem 'unicorn'
+gem "sentry-raven" 
 
 group :development do
   gem 'thin'
@@ -36,7 +39,7 @@ group :test do
   gem 'launchy'
 end
 
-group :production do
+group :production, :staging do
   gem 'rails_12factor'
 end
 
